@@ -44,6 +44,7 @@ class InfraredCamera(StructureCamera):
         self.infrared_auto_exposure = True
         self.infrared_enabled = True
         self.infrared_mode = StructureCamera.SC_INFRARED_MODE_RIGHT
+        self.depth_resolution = StructureCamera.SC_RESOLUTION_VGA
 
         self.start()
 
@@ -57,10 +58,10 @@ class DepthCamera(StructureCamera):
     def __init__(self):
         super(DepthCamera, self).__init__()
         self.infrared_auto_exposure = True
-        self.depth_range = StructureCamera.SC_DEPTH_RANGE_LONG
+        self.depth_range = StructureCamera.SC_DEPTH_RANGE_SHORT
         self.calibration_mode = StructureCamera.SC_CALIBRATION_ONESHOT
         self.infrared_mode = StructureCamera.SC_INFRARED_MODE_RIGHT
-        self.depth_resolution = StructureCamera.SC_RESOLUTION_SXGA
+        self.depth_resolution = StructureCamera.SC_RESOLUTION_VGA
 
         self.start()
 
